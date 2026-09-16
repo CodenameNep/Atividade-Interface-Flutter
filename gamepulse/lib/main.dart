@@ -20,13 +20,17 @@ class GamePulseApp extends StatelessWidget {
           centerTitle: true,
         ),
       ),
-      home: const HomeScreen(),
+      home: const Principal(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class Principal extends StatelessWidget {
+  const Principal({super.key});
+
+  // Alunos:
+  // Danilo Almeida Brito
+  // Leandro Andrade Dos Santos
 
   @override
   Widget build(BuildContext context) {
@@ -50,10 +54,8 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
-
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -82,15 +84,12 @@ class HomeScreen extends StatelessWidget {
   Widget _buildFeaturedCard() {
     return Container(
       padding: const EdgeInsets.all(16.0),
-
       decoration: BoxDecoration(
         color: const Color(0xFF1F1F23),
         borderRadius: BorderRadius.circular(12),
       ),
-
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-
         children: [
           const Text(
             'EM DESTAQUE • PS5 & PC',
@@ -131,7 +130,9 @@ class HomeScreen extends StatelessWidget {
                   fontSize: 12,
                 ),
               ),
+
               SizedBox(width: 16),
+
               Icon(
                 Icons.calendar_today,
                 size: 14,
@@ -151,32 +152,31 @@ class HomeScreen extends StatelessWidget {
           const SizedBox(height: 16),
 
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
             children: [
-              ElevatedButton.icon(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.menu_book,
-                  size: 18,
-                ),
-                label: const Text(
-                  'Ler Notícia Completa',
-                ),
-
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.greenAccent,
-                  foregroundColor: Colors.black,
-
-                  textStyle: const TextStyle(
-                    fontWeight: FontWeight.bold,
+              Expanded(
+                child: ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.menu_book,
+                    size: 18,
                   ),
-
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
+                  label: const Text(
+                    'Ler Notícia Completa',
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.greenAccent,
+                    foregroundColor: Colors.black,
+                    textStyle: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                   ),
                 ),
               ),
+
+              const SizedBox(width: 8),
 
               IconButton(
                 icon: const Icon(
@@ -224,11 +224,9 @@ class HomeScreen extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: noticias.length,
-
       separatorBuilder: (context, index) {
         return const SizedBox(height: 12);
       },
-
       itemBuilder: (context, index) {
         final noticia = noticias[index];
 
@@ -250,25 +248,20 @@ class HomeScreen extends StatelessWidget {
   }) {
     return Container(
       padding: const EdgeInsets.all(14),
-
       decoration: BoxDecoration(
         color: const Color(0xFF1F1F23),
         borderRadius: BorderRadius.circular(12),
       ),
-
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
-
         children: [
           Container(
             width: 60,
             height: 60,
-
             decoration: BoxDecoration(
               color: const Color(0xFF2A2A2F),
               borderRadius: BorderRadius.circular(10),
             ),
-
             child: Icon(
               icone,
               color: Colors.greenAccent,
@@ -281,7 +274,6 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: [
                 Text(
                   categoria,
