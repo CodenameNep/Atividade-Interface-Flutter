@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//Leandro Andrade dos Santos e Danilo Almeida Brito
 void main() {
   runApp(const GamePulseApp());
 }
