@@ -66,10 +66,10 @@ class HomeScreen extends StatelessWidget {
         color: const Color(0xFF1F1F23),
         borderRadius: BorderRadius.circular(12),
       ),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'EM DESTAQUE • PS5 & PC',
             style: TextStyle(
               color: Colors.greenAccent,
@@ -78,8 +78,8 @@ class HomeScreen extends StatelessWidget {
               letterSpacing: 1.1,
             ),
           ),
-          SizedBox(height: 8),
-          Text(
+          const SizedBox(height: 8),
+          const Text(
             'GTA 6 ganha novo trailer revelando gameplay inédita e data de lançamento',
             style: TextStyle(
               color: Colors.white,
@@ -88,8 +88,8 @@ class HomeScreen extends StatelessWidget {
               height: 1.3,
             ),
           ),
-          SizedBox(height: 12),
-          Row(
+          const SizedBox(height: 12),
+          const Row(
             children: [
               Icon(Icons.access_time, size: 14, color: Colors.grey),
               SizedBox(width: 4),
@@ -103,6 +103,29 @@ class HomeScreen extends StatelessWidget {
               Text(
                 'Hoje, 14:30',
                 style: TextStyle(color: Colors.grey, fontSize: 12),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              ElevatedButton.icon(
+                onPressed: () {},
+                icon: const Icon(Icons.menu_book, size: 18),
+                label: const Text('Ler Notícia Completa'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.greenAccent,
+                  foregroundColor: Colors.black,
+                  textStyle: const TextStyle(fontWeight: FontWeight.bold),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+              ),
+              IconButton(
+                icon: const Icon(Icons.bookmark_border, color: Colors.grey),
+                onPressed: () {},
               ),
             ],
           ),
